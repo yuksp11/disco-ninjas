@@ -16,8 +16,14 @@ export default function Home() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Inventory Stock</h1>
-        <button onClick={() => setClickButton(true)}>Start</button>
+        <h1>Warehouse Ninja</h1>
+        <button
+        style={{maxWidth: '90px', maxHeight: '30px', minWidth: '90px', minHeight: '30px'}}
+        onClick={() => setClickButton(true)}>Shelf 1</button>
+        <br></br>
+        <button style={{maxWidth: '90px', maxHeight: '30px', minWidth: '90px', minHeight: '30px'}}>Shelf 2</button>
+        <br></br>
+        <button style={{maxWidth: '90px', maxHeight: '30px', minWidth: '90px', minHeight: '30px'}}>Shelf 3</button>
       </header>
     </div>
   )

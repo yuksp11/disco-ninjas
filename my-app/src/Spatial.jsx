@@ -30,6 +30,9 @@ const useStyles = makeStyles({
   }
 });
 
+
+
+
 export default function Spatial() {
   const [clickButton, setClickButton] = React.useState(false);
   const classes = useStyles();
@@ -46,6 +49,10 @@ export default function Spatial() {
     return <Redirect to="/" />
   }
 
+
+ 
+
+
   return (
     <ThemeProvider theme={theme}>
       <Container className="App">
@@ -53,15 +60,19 @@ export default function Spatial() {
           <Typography 
             variant="h2" 
             style={{ height: 100, width: '100%', position: 'relative'}}>
-            Inventory Stocks Page
+            Shelf 1
           </Typography>
           <Typography style={{ height: 80, width: '100%', position: 'relative'}}>
             <Button id="home-btn" variant="contained" onClick={() => setClickButton(true)}>Back to Home Page</Button>
           </Typography>
+          <button colour = "primary">Remove one of selected stock</button>
+          
+          <button colour = "secondary"> Remove entire of selected stock</button>
+          <br></br>
  
           <Grid container spacing={3}>
             {stocks.map(stock => (
-              <Grid item key={stock.id} xs={12} md={6} lg={6}>
+              <Grid item key={stock.id} xs={12} md={4} lg={4}>
                 <ItemCard stock={stock} />
               </Grid>
             ))}
